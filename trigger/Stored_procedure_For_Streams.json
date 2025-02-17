@@ -1,0 +1,25 @@
+{
+	"name": "Stored_procedure_For_Streams",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Streams_Procedure",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 2,
+				"startTime": "2025-02-17T13:27:00",
+				"endTime": "2025-02-17T13:40:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}

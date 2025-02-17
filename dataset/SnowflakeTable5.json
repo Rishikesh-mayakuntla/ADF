@@ -1,0 +1,36 @@
+{
+	"name": "SnowflakeTable5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Streams",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "StudentID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "Name",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "Course",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "FeePaid",
+				"type": "VARCHAR"
+			}
+		],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "SQL"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

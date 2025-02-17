@@ -1,0 +1,9 @@
+{
+	"name": "snowflakepaid",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c1e95cb4-2863-44e3-a5d4-94ed06ab27e3",
+		"tenantId": "c98b0925-2351-4e68-8582-cb039bc6bbf2"
+	}
+}

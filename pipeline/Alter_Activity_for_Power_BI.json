@@ -1,0 +1,34 @@
+{
+	"name": "Alter_Activity_for_Power_BI",
+	"properties": {
+		"activities": [
+			{
+				"name": "Alter_Activity_for_Females",
+				"type": "ExecuteDataFlow",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"dataflow": {
+						"referenceName": "Alter_Activity_for_Power_BI",
+						"type": "DataFlowReference"
+					},
+					"compute": {
+						"coreCount": 8,
+						"computeType": "General"
+					},
+					"traceLevel": "Fine"
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-02-17T12:27:26Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,36 @@
+{
+	"name": "SnowflakeTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Streams",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SnowflakeV2Table",
+		"schema": [
+			{
+				"name": "CustomerID",
+				"type": "NUMBER",
+				"precision": 38,
+				"scale": 0
+			},
+			{
+				"name": "CustomerName",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "Location",
+				"type": "VARCHAR"
+			},
+			{
+				"name": "Gender",
+				"type": "VARCHAR"
+			}
+		],
+		"typeProperties": {
+			"schema": "PUBLIC",
+			"table": "FRIDAY"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,16 @@
+{
+	"name": "Streams",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "npqecmp-sg47069",
+			"user": "Rishikesh",
+			"database": "LENOVO",
+			"warehouse": "COMPUTE_WH",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDRBMzUwMEZGLUIwNDgtNDhBMy04NTJDLTE1RkU1NzNGOTRDQl84NTM4ZGUwZi00Mjc5LTQ1YzktYjUxZC03NTNhYTk4ZjJkYTEiDQp9"
+		}
+	}
+}
