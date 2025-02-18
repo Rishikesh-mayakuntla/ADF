@@ -1,0 +1,51 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "snowflakepaid"
+		},
+		"Snowflake1_password": {
+			"value": ""
+		},
+		"Snowflake2_password": {
+			"value": ""
+		},
+		"Streams_password": {
+			"value": ""
+		},
+		"For_Alter_sasUri": {
+			"value": ""
+		},
+		"Friday_sasUri": {
+			"value": ""
+		},
+		"Friday_Eve_sasUri": {
+			"value": ""
+		},
+		"Monday_sasUri": {
+			"value": ""
+		},
+		"Snowflake1_properties_typeProperties_database": {
+			"value": "LENOVO"
+		},
+		"Snowflake2_properties_typeProperties_database": {
+			"value": "LENOVO"
+		},
+		"Streams_properties_typeProperties_database": {
+			"value": "LENOVO"
+		},
+		"Thrusday_sasUri": {
+			"value": ""
+		},
+		"Tuesday_sasUri": {
+			"value": ""
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}

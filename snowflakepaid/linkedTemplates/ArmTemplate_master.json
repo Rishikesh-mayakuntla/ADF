@@ -1,0 +1,146 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "snowflakepaid"
+		},
+		"Snowflake1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Snowflake1'"
+		},
+		"Snowflake2_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Snowflake2'"
+		},
+		"Streams_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'Streams'"
+		},
+		"For_Alter_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'For_Alter'"
+		},
+		"Friday_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'Friday'"
+		},
+		"Friday_Eve_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'Friday_Eve'"
+		},
+		"Monday_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'Monday'"
+		},
+		"Snowflake1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "LENOVO"
+		},
+		"Snowflake2_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "LENOVO"
+		},
+		"Streams_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "LENOVO"
+		},
+		"Thrusday_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'Thrusday'"
+		},
+		"Tuesday_sasUri": {
+			"type": "secureString",
+			"metadata": "Secure string for 'sasUri' of 'Tuesday'"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "snowflakepaid_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"Snowflake1_password": {
+						"value": "[parameters('Snowflake1_password')]"
+					},
+					"Snowflake2_password": {
+						"value": "[parameters('Snowflake2_password')]"
+					},
+					"Streams_password": {
+						"value": "[parameters('Streams_password')]"
+					},
+					"For_Alter_sasUri": {
+						"value": "[parameters('For_Alter_sasUri')]"
+					},
+					"Friday_sasUri": {
+						"value": "[parameters('Friday_sasUri')]"
+					},
+					"Friday_Eve_sasUri": {
+						"value": "[parameters('Friday_Eve_sasUri')]"
+					},
+					"Monday_sasUri": {
+						"value": "[parameters('Monday_sasUri')]"
+					},
+					"Snowflake1_properties_typeProperties_database": {
+						"value": "[parameters('Snowflake1_properties_typeProperties_database')]"
+					},
+					"Snowflake2_properties_typeProperties_database": {
+						"value": "[parameters('Snowflake2_properties_typeProperties_database')]"
+					},
+					"Streams_properties_typeProperties_database": {
+						"value": "[parameters('Streams_properties_typeProperties_database')]"
+					},
+					"Thrusday_sasUri": {
+						"value": "[parameters('Thrusday_sasUri')]"
+					},
+					"Tuesday_sasUri": {
+						"value": "[parameters('Tuesday_sasUri')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "snowflakepaid_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'snowflakepaid_ArmTemplate_0')]"
+			]
+		}
+	]
+}
