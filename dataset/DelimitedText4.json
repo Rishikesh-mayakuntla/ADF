@@ -1,8 +1,8 @@
 {
-	"name": "DelimitedText3",
+	"name": "DelimitedText4",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "For_Alter",
+			"referenceName": "Tuesday",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
