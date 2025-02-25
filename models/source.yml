@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: rishi_kesh
+    database: "{{('lenovo')}}"
+    schema: dbt_source
+    tables:
+      - name: customers
+      - name: Fresh_customers
+      - name: students
+      - name: samsung
+      - name: alts
+    
