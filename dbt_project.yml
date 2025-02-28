@@ -42,7 +42,7 @@ models:
       +materialized: table
     stg_data:
       +materialized: table
-      +transient: false
+      +transient: false 
 snapshots:
       +target_schema: snapshots 
       
