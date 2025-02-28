@@ -9,4 +9,4 @@ with cte as (
     end as free_cateogory from {{source('rishi_kesh','samsung')}}
 )
 
-select * from cte 
+select * from cte
