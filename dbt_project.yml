@@ -40,9 +40,10 @@ models:
     # Applies to all files under models/example/
     example:
       +materialized: table
-<<<<<<< HEAD
-=======
+
     stg_data:
       +materialized: table
-       transient:false
->>>>>>> e268fa631a504d36f4e0b031ad9b5342dc59388f
+      +transient: false 
+snapshots:
+      +target_schema: snapshots 
+      
